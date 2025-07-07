@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct AdidasLiteApp: App {
-    let persistenceController = PersistenceController.shared
-
+    @StateObject private var authVM = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authVM.isLoggedIn {
+                ProductListView()
+            } else {
+                LoginView()
+                    .environmentObject(authVM)
+            }
         }
     }
 }

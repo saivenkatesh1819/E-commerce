@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		370A4BD52E14648100A44F44 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 370A4BD42E14648100A44F44 /* Alamofire */; };
 		370A4BDE2E1471A900A44F44 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 370A4BDD2E1471A900A44F44 /* Moya */; };
-		370A4BE32E15A52600A44F44 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 370A4BE22E15A52600A44F44 /* MobileNetV2.mlmodel */; };
+		370A4C232E16F75200A44F44 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 370A4C222E16F75200A44F44 /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +33,24 @@
 		370A4BA42E14634300A44F44 /* AdidasLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdidasLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370A4BB62E14634500A44F44 /* AdidasLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdidasLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370A4BC02E14634500A44F44 /* AdidasLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdidasLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		370A4BE22E15A52600A44F44 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		370A4C202E16F4F000A44F44 /* Exceptions for "AdidasLite" folder in "AdidasLite" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 370A4BA32E14634300A44F44 /* AdidasLite */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		370A4BA62E14634300A44F44 /* AdidasLite */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				370A4C202E16F4F000A44F44 /* Exceptions for "AdidasLite" folder in "AdidasLite" target */,
+			);
 			path = AdidasLite;
 			sourceTree = "<group>";
 		};
@@ -61,6 +73,7 @@
 			files = (
 				370A4BDE2E1471A900A44F44 /* Moya in Frameworks */,
 				370A4BD52E14648100A44F44 /* Alamofire in Frameworks */,
+				370A4C232E16F75200A44F44 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +101,6 @@
 				370A4BB92E14634500A44F44 /* AdidasLiteTests */,
 				370A4BC32E14634500A44F44 /* AdidasLiteUITests */,
 				370A4BA52E14634300A44F44 /* Products */,
-				370A4BE22E15A52600A44F44 /* MobileNetV2.mlmodel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +136,7 @@
 			packageProductDependencies = (
 				370A4BD42E14648100A44F44 /* Alamofire */,
 				370A4BDD2E1471A900A44F44 /* Moya */,
+				370A4C222E16F75200A44F44 /* KeychainAccess */,
 			);
 			productName = AdidasLite;
 			productReference = 370A4BA42E14634300A44F44 /* AdidasLite.app */;
@@ -210,6 +223,7 @@
 			packageReferences = (
 				370A4BD32E14648100A44F44 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				370A4BDC2E1471A900A44F44 /* XCRemoteSwiftPackageReference "Moya" */,
+				370A4C212E16F75200A44F44 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 370A4BA52E14634300A44F44 /* Products */;
@@ -252,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370A4BE32E15A52600A44F44 /* MobileNetV2.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +430,7 @@
 				DEVELOPMENT_TEAM = 9YG8Q7GPBK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdidasLite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +459,7 @@
 				DEVELOPMENT_TEAM = 9YG8Q7GPBK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdidasLite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -593,6 +608,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		370A4C212E16F75200A44F44 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -605,6 +628,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 370A4BDC2E1471A900A44F44 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		370A4C222E16F75200A44F44 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 370A4C212E16F75200A44F44 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
