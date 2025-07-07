@@ -35,7 +35,7 @@ class APIService {
 
 
 
-class FootwearService {
+public class FootwearService {
     
     private let provider = MoyaProvider<FootwearAPI>()
     

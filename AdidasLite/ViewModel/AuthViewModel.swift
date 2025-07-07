@@ -11,7 +11,7 @@ import Combine
 class AuthViewModel: ObservableObject {
     @Published var isLoggedIn = false
     
-    let oauthManager = OAuthManager()
+    var oauthManager = OAuthManager()
     
     func login() {
         oauthManager.startLogin { success in

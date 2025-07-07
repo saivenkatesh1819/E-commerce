@@ -11,9 +11,9 @@ class ProductListViewModel: ObservableObject {
     @Published var images: [UUID: UIImage] = [:]
     @Published var predictions: [UUID: String] = [:]
     
-    private let footwearService = FootwearService()
-    private let imageLoader = ImageLoader()
-    private let imageClassifier = ImageClassifier()
+    private var footwearService = FootwearService()
+    private var imageLoader = ImageLoader()
+    private var imageClassifier = ImageClassifier()
     
     func fetchProductsAndClassify() {
         footwearService.fetchMaleFootwear { [weak self] result in
@@ -52,3 +52,12 @@ class ProductListViewModel: ObservableObject {
         }
     }
 }
+
+extension ProductListViewModel {
+    func setDependencies(footwearService: FootwearService, imageLoader: ImageLoader, imageClassifier: ImageClassifier) {
+         self.footwearService = footwearService
+         self.imageLoader = imageLoader
+         self.imageClassifier = imageClassifier
+    }
+}
+

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ProductModel: Decodable, Identifiable {
-    let id = UUID()
+public struct ProductModel: Decodable, Identifiable {
+    public let id = UUID()
     let brand: String
     let description: String
     let image: String
