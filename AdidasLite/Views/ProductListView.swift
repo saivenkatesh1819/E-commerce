@@ -28,9 +28,12 @@ struct ProductListView: View {
                             .overlay(Text("Loading...").font(.caption))
                     }
                     
+                    
                     VStack(alignment: .leading, spacing: 5) {
                         Text(product.brand)
                             .font(.headline)
+                            .accessibilityIdentifier("Brand_\(product.id)")
+
                         Text(product.description)
                             .font(.subheadline)
                         Text(product.price)
@@ -42,6 +45,8 @@ struct ProductListView: View {
                                 .font(.caption)
                                 .foregroundColor(.blue)
                                 .lineLimit(1)
+                                .accessibilityIdentifier("Prediction_\(product.id)")
+
                         } else {
                             Text("Classifying...")
                                 .font(.caption)

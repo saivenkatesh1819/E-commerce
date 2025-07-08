@@ -13,12 +13,15 @@ struct AdidasLiteApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if authVM.isLoggedIn {
-                ProductListView()
-            } else {
-                LoginView()
-                    .environmentObject(authVM)
+            NavigationStack {
+                if authVM.isLoggedIn {
+                    ProductListView()
+                } else {
+                    LoginView()
+                        .environmentObject(authVM)
+                }
             }
+           
         }
     }
 }
