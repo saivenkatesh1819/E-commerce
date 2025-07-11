@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import StripeCore
 
 @main
 struct AdidasLiteApp: App {
+    init() {
+           StripeAPI.defaultPublishableKey = "pk_test_51RjPHXRuYJaM4uYeS1R0VryCznn7UfIt9c8po6PqZSZsu7BUTbYMql6X7GBfEvzdhSuq2CWV9FY7KSLUIzZVEoYl007p5NHy4G"
+       }
+
     @StateObject private var authVM = AuthViewModel()
     
     var body: some Scene {
